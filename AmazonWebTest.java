@@ -25,6 +25,11 @@ public class AmazonWebTest {
 	@Test
 	public void test() {
 		driver.get(baseUrl);
+		driver.findElement(By.id("nav-link-accountList")).click();
+		driver.findElement(By.id("ap_email")).sendKeys("9773224778");
+		driver.findElement(By.id("continue")).click();
+		driver.findElement(By.id("ap_password")).sendKeys("********");
+		driver.findElement(By.id("signInSubmit")).click();
 		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("earphones");
 		driver.findElement(By.xpath("//*[@id='nav-search-submit-button']")).click();
 	}
